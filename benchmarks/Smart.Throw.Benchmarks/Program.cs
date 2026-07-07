@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using BenchmarkDotNet.Running;
-using Migs.Throw.Benchmarks;
+using Smart.Throw.Benchmarks;
 
 _ = BenchmarkRunner.Run<ThrowBenchmarks>();
 

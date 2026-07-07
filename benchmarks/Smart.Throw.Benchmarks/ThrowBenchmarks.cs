@@ -1,9 +1,9 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Order;
-using Migs.Throw.Generic;
+using Smart.Throw.Generic;
 
-namespace Migs.Throw.Benchmarks
+namespace Smart.Throw.Benchmarks
 {
     [MemoryDiagnoser]
     [RankColumn]

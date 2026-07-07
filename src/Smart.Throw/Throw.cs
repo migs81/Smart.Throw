@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
-namespace Migs.Throw
+namespace Smart.Throw
 {
     /// <summary>
     /// Contains some methods for throwing exceptions on specific conditions.

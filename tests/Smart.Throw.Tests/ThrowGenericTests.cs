@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Migs.Throw.Generic;
+using Smart.Throw.Generic;
 using Xunit;
 
-namespace Migs.Throw.Tests
+namespace Smart.Throw.Tests
 {
     public class ThrowGenericTests
     {

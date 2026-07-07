@@ -5,7 +5,7 @@
 		<LangVersion>default</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<RootNamespace>Migs.Throw.Benchmarks</RootNamespace>
+		<RootNamespace>Smart.Throw.Benchmarks</RootNamespace>
 		<TargetFramework>net8.0</TargetFramework>
 	</PropertyGroup>
 
@@ -14,7 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Migs.Throw\Migs.Throw.csproj" />
+		<ProjectReference Include="..\..\src\Smart.Throw\Smart.Throw.csproj" />
 	</ItemGroup>
 
 </Project>

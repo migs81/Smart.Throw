@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migs.Throw", "src\Migs.Throw\Migs.Throw.csproj", "{F551370C-1AEC-478E-9487-CB270D81745C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.Throw", "src\Smart.Throw\Smart.Throw.csproj", "{F551370C-1AEC-478E-9487-CB270D81745C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migs.Throw.Benchmarks", "benchmarks\Migs.Throw.Benchmarks\Migs.Throw.Benchmarks.csproj", "{EE905A01-6953-46DE-8769-0A53D02C0E89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.Throw.Benchmarks", "benchmarks\Smart.Throw.Benchmarks\Smart.Throw.Benchmarks.csproj", "{EE905A01-6953-46DE-8769-0A53D02C0E89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migs.Throw.Tests", "tests\Migs.Throw.Tests\Migs.Throw.Tests.csproj", "{9ECFCE3F-18AA-432E-B3DA-973105CEBE18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.Throw.Tests", "tests\Smart.Throw.Tests\Smart.Throw.Tests.csproj", "{9ECFCE3F-18AA-432E-B3DA-973105CEBE18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

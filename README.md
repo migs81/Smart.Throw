@@ -1,10 +1,10 @@
-# 📚 Migs.Throw
+# 📚 Smart.Throw
 
 A lightweight C# library for simplifying parameter validation and exception throwing.
 
 ## 📝 Description
 
-Migs.Throw is designed to make input validation and exception throwing more concise and maintainable.
+Smart.Throw is designed to make input validation and exception throwing more concise and maintainable.
 Reduces boilerplate code and improves readability by providing expressive validation methods.
 
 ## ✨ Features
@@ -21,11 +21,11 @@ Reduces boilerplate code and improves readability by providing expressive valida
 
 1. Clone the repository:
   ```bash
-   git clone https://github.com/migs81/Migs.Throw.git
+   git clone https://github.com/migs81/Smart.Throw.git
   ```
 2. Navigate to the project directory:
   ```bash
-   cd Migs.Throw
+   cd Smart.Throw
   ```
 3. Restore dependencies:
   ```bash
@@ -41,7 +41,7 @@ Reduces boilerplate code and improves readability by providing expressive valida
 ### Basic Validation
 
 ```csharp
-using Migs.Throw;
+using Smart.Throw;
 
 string? path = null;
 string? filename = null;
@@ -93,7 +93,7 @@ You can find it in the `/benchmarks/` folder.
 
 1. Navigate to the benchmark project:
   ```bash
-   cd benchmarks/Migs.Throw.Benchmarks
+   cd benchmarks/Smart.Throw.Benchmarks
   ```
 2. Run the benchmarks using [BenchmarkDotNet](https://benchmarkdotnet.org/):
   ```bash
@@ -103,13 +103,13 @@ You can find it in the `/benchmarks/` folder.
 ## 📂 Project Structure
 
 ```
-Migs.Throw/
+Smart.Throw/
 ├── src/
-│   ├── Migs.Throw/              # Core library
+│   ├── Smart.Throw/              # Core library
 ├── benchmarks/                       
-│   └── Migs.Throw.Benchmarks    # Benchmarks
+│   └── Smart.Throw.Benchmarks    # Benchmarks
 ├── tests/                       
-│   └── Migs.Throw.Tests         # Unit tests
+│   └── Smart.Throw.Tests         # Unit tests
 └── README.md                    # This file
 ```
 

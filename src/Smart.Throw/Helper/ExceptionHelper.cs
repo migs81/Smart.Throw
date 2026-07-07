@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Migs.Throw.Helper
+namespace Smart.Throw.Helper
 {
     /// <summary>
     /// Contains helper methods

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using Migs.Throw.Generic;
+using Smart.Throw.Generic;
 
-namespace Migs.Throw
+namespace Smart.Throw
 {
     /// <summary>
     /// Contains some extension methods for various types.

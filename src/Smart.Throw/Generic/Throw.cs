@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Migs.Throw.Helper;
+using Smart.Throw.Helper;
 
-namespace Migs.Throw.Generic
+namespace Smart.Throw.Generic
 {
     /// <summary>
     /// Contains some methods for throwing exceptions on specific conditions.
