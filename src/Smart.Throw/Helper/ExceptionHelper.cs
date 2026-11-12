@@ -11,9 +11,9 @@ namespace Smart.Throw.Helper
         /// <summary>
         /// Returns a new instance of the specified exception type.
         /// </summary>
-        /// <param name="message"></param>
-        /// <param name="paramName"></param>
-        /// <param name="innerException"></param>
+        /// <param name="message">The message describing the exception.</param>
+        /// <param name="paramName">The name of the parameter that caused the exception.</param>
+        /// <param name="innerException">The inner exception that caused the current exception.</param>
         /// <returns></returns>
         internal static TException Create<TException>(string? message = null, string? paramName = null, Exception? innerException = null) 
             where TException : Exception
@@ -26,13 +26,13 @@ namespace Smart.Throw.Helper
             : (TException)Activator.CreateInstance(typeof(TException), GetArgs<TException>(message, null, innerException));
 
         /// <summary>
-        /// Returns an object array with the given arguments for argument exceptions.
+        /// Returns an object array with the specified arguments for argument exceptions.
         /// </summary>
-        /// <typeparam name="TException"></typeparam>
-        /// <param name="message"></param>
-        /// <param name="paramName"></param>
-        /// <param name="innerException"></param>
-        /// <returns></returns>
+        /// <typeparam name="TException">The type of exception to create arguments for.</typeparam>
+        /// <param name="message">The message describing the exception.</param>
+        /// <param name="paramName">The name of the parameter that caused the exception.</param>
+        /// <param name="innerException">The inner exception that caused the current exception.</param>
+        /// <returns>An array of arguments suitable for constructing the specified exception type.</returns>
         private static object[] GetArgs<TException>(string? message = null, string? paramName = null, Exception? innerException = null) 
             where TException : Exception
         {

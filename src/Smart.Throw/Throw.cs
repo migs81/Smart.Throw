@@ -13,11 +13,12 @@ namespace Smart.Throw
         #region public methods
 
         /// <summary>
-        /// Throws the given exception if the given condition is true.
+        /// Throws the specified exception if the condition is <see langword="true"/>.
         /// </summary>
-        /// <param name="condition"></param>
-        /// <param name="exception"></param>w
-        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <c>null</c>.</exception>
+        /// <param name="condition">The condition that determines whether the exception is thrown.</param>
+        /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
+        /// <exception cref="Exception"><paramref name="condition"/> is <see langword="true"/>.</exception>
         public static void If([DoesNotReturnIf(true)] bool condition, Exception exception)
         {
             _ = exception ?? throw new ArgumentNullException(nameof(exception));
@@ -27,44 +28,44 @@ namespace Smart.Throw
         }
 
         /// <summary>
-        /// Throws the given exception if the given object is null.
+        /// Throws the specified exception if the specified object is <see langword="null"/>.
         /// </summary>
-        /// <param name="obj"></param>
-        /// <param name="exception"></param>
-        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <c>null</c>.</exception>
+        /// <param name="obj">The object to check for <see langword="null"/>.</param>
+        /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
         public static void IfNull(object obj, Exception exception) => If(obj is null, exception);
 
         /// <summary>
-        /// Throws the given exception if the given value is null or empty.
+        /// Throws the specified exception if the specified string is <see langword="null"/> or empty.
         /// </summary>
-        /// <param name="value"></param>
-        /// <param name="exception"></param>
-        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <c>null</c>.</exception>
+        /// <param name="value">The string to check.</param>
+        /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
         public static void IfNullOrEmpty(string value, Exception exception) => If(string.IsNullOrEmpty(value), exception);
 
         /// <summary>
-        /// Throws the given exception if the given collection is null or empty.
+        /// Throws the specified exception if the specified collection is <see langword="null"/> or empty.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="collection"></param>
-        /// <param name="exception"></param>
-        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <c>null</c>.</exception>
+        /// <typeparam name="T">The type of elements in the collection.</typeparam>
+        /// <param name="collection">The collection to check.</param>
+        /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
         public static void IfNullOrEmpty<T>(IEnumerable<T>? collection, Exception exception) => If(collection is null || !collection.Any(), exception);
 
         /// <summary>
-        /// Throws the given exception if the given collection is null or empty.
+        /// Throws the specified exception if the specified collection is <see langword="null"/> or empty.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="collection"></param>
-        /// <param name="exception"></param>
-        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <c>null</c>.</exception>
+        /// <typeparam name="T">The type of elements in the collection.</typeparam>
+        /// <param name="collection">The collection to check.</param>
+        /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
         public static void IfNullOrEmpty<T>(ICollection<T>? collection, Exception exception) => If(collection is null || collection.Count == 0, exception);
 
         /// <summary>
-        /// Throws the given exception if any of the given objects is null.
+        /// Throws the corresponding exception for each specified object that is <see langword="null"/>.
         /// </summary>
-        /// <param name="args"></param>
-        /// <exception cref="ArgumentNullException"><paramref name="args"/> is <c>null</c>.</exception>
+        /// <param name="args">The objects and their corresponding exceptions to check.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="args"/> is <see langword="null"/>.</exception>
         public static void IfAnyNull(params (object obj, Exception exception)[] args)
         {
             _ = args ?? throw new ArgumentNullException(nameof(args));
@@ -74,11 +75,11 @@ namespace Smart.Throw
         }
 
         /// <summary>
-        /// Throws the given exception if the given value is null, empty or consists only of white-space characters.
+        /// Throws the specified exception if the specified string is <see langword="null"/>, empty, or consists only of white-space characters.
         /// </summary>
-        /// <param name="value"></param>
-        /// <param name="exception"></param>
-        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <c>null</c>.</exception>
+        /// <param name="value">The string to check.</param>
+        /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
         public static void IfNullOrWhiteSpace(string value, Exception exception) => If(string.IsNullOrWhiteSpace(value), exception);
 
         #endregion
