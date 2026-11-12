@@ -41,7 +41,8 @@ namespace Smart.Throw
         /// <param name="value">The string to check.</param>
         /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
-        public static void IfNullOrEmpty(string value, Exception exception) => If(string.IsNullOrEmpty(value), exception);
+        public static void IfNullOrEmpty(string value, Exception exception) => 
+            If(string.IsNullOrEmpty(value), exception);
 
         /// <summary>
         /// Throws the specified exception if the specified collection is <see langword="null"/> or empty.
@@ -50,7 +51,8 @@ namespace Smart.Throw
         /// <param name="collection">The collection to check.</param>
         /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
-        public static void IfNullOrEmpty<T>(IEnumerable<T>? collection, Exception exception) => If(collection is null || !collection.Any(), exception);
+        public static void IfNullOrEmpty<T>(IEnumerable<T>? collection, Exception exception) => 
+            If(collection is null || !collection.Any(), exception);
 
         /// <summary>
         /// Throws the specified exception if the specified collection is <see langword="null"/> or empty.
@@ -59,7 +61,8 @@ namespace Smart.Throw
         /// <param name="collection">The collection to check.</param>
         /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
-        public static void IfNullOrEmpty<T>(ICollection<T>? collection, Exception exception) => If(collection is null || collection.Count == 0, exception);
+        public static void IfNullOrEmpty<T>(ICollection<T>? collection, Exception exception) => 
+            If(collection is null || collection.Count == 0, exception);
 
         /// <summary>
         /// Throws the corresponding exception for each specified object that is <see langword="null"/>.
@@ -80,7 +83,8 @@ namespace Smart.Throw
         /// <param name="value">The string to check.</param>
         /// <param name="exception">The exception to throw. Must not be <see langword="null"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="exception"/> is <see langword="null"/>.</exception>
-        public static void IfNullOrWhiteSpace(string value, Exception exception) => If(string.IsNullOrWhiteSpace(value), exception);
+        public static void IfNullOrWhiteSpace(string value, Exception exception) =>
+            If(string.IsNullOrWhiteSpace(value), exception);
 
         #endregion
     }

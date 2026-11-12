@@ -44,7 +44,7 @@ namespace Smart.Throw.Generic
             throw ExceptionHelper.Create<TException>(message, paramName, innerException);
 
         #endregion
-
+        
         #region If
 
         /// <summary>
@@ -78,7 +78,8 @@ namespace Smart.Throw.Generic
         /// <param name="message">The message describing the exception.</param>
         /// <param name="paramName">Used only if TException is of type ArgumentException</param>
         /// <param name="innerException">The inner exception that caused the current exception.</param>
-        public static void If([DoesNotReturnIf(true)] bool condition, string? message, string? paramName, Exception? innerException)
+        public static void If([DoesNotReturnIf(true)] bool condition, string? message, string? paramName,
+            Exception? innerException)
         {
             if (condition)
                 throw ExceptionHelper.Create<TException>(message, paramName, innerException);
@@ -196,7 +197,8 @@ namespace Smart.Throw.Generic
         /// <param name="message">The message describing the exception.</param>
         /// <param name="paramName">The name of the parameter that caused the exception.</param>
         /// <param name="innerException">The inner exception that caused the current exception.</param>
-        public static void IfNullOrEmpty<T>(IEnumerable<T>? collection, string? message, string? paramName, Exception? innerException)
+        public static void IfNullOrEmpty<T>(IEnumerable<T>? collection, string? message, string? paramName, 
+            Exception? innerException)
         {
             if (collection is null || !collection.Any())
                 throw ExceptionHelper.Create<TException>(message, paramName, innerException);
@@ -237,7 +239,8 @@ namespace Smart.Throw.Generic
         /// <param name="message">The message describing the exception.</param>
         /// <param name="paramName">The name of the parameter that caused the exception.</param>
         /// <param name="innerException">The inner exception that caused the current exception.</param>
-        public static void IfNullOrEmpty<T>(ICollection<T>? collection, string? message, string? paramName, Exception? innerException)
+        public static void IfNullOrEmpty<T>(ICollection<T>? collection, string? message, string? paramName, 
+            Exception? innerException)
         {
             if (collection is null || collection.Count == 0)
                 throw ExceptionHelper.Create<TException>(message, paramName, innerException);
@@ -278,7 +281,8 @@ namespace Smart.Throw.Generic
         /// <param name="message">The message describing the exception.</param>
         /// <param name="paramName">The name of the parameter that caused the exception.</param>
         /// <param name="innerException">The inner exception that caused the current exception.</param>
-        public static void IfNullOrWhiteSpace(string? value, string? message, string? paramName, Exception? innerException)
+        public static void IfNullOrWhiteSpace(string? value, string? message, string? paramName, 
+            Exception? innerException)
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw ExceptionHelper.Create<TException>(message, paramName, innerException);

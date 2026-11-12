@@ -52,7 +52,8 @@ namespace Smart.Throw
         /// <param name="value">The string to check.</param>
         /// <param name="message">The message describing the exception.</param>
         /// <returns>The original argument.</returns>
-        public static string ThrowIfNullOrEmpty(this string value, string message = "Argument can not be null or empty!")
+        public static string ThrowIfNullOrEmpty(this string value,
+            string message = "Argument can not be null or empty!")
         {
             Throw<ArgumentException>.IfNullOrEmpty(value, message);
             return value;
@@ -65,7 +66,8 @@ namespace Smart.Throw
         /// <param name="collection">The collection to check.</param>
         /// <param name="message">The message describing the exception.</param>
         /// <returns>The original collection.</returns>
-        public static IEnumerable<T> ThrowIfNullOrEmpty<T>(this IEnumerable<T> collection, string message = "Argument can not be null or empty!")
+        public static IEnumerable<T> ThrowIfNullOrEmpty<T>(this IEnumerable<T> collection,
+            string message = "Argument can not be null or empty!")
         {
             Throw<ArgumentException>.IfNullOrEmpty(collection, message);
             return collection;
@@ -78,7 +80,8 @@ namespace Smart.Throw
         /// <param name="collection">The collection to check.</param>
         /// <param name="message">The message describing the exception.</param>
         /// <returns>The original collection.</returns>
-        public static ICollection<T> ThrowIfNullOrEmpty<T>(this ICollection<T> collection, string message = "Argument can not be null or empty!")
+        public static ICollection<T> ThrowIfNullOrEmpty<T>(this ICollection<T> collection,
+            string message = "Argument can not be null or empty!")
         {
             Throw<ArgumentException>.IfNullOrEmpty(collection, message);
             return collection;
@@ -90,7 +93,8 @@ namespace Smart.Throw
         /// <param name="value">The string to check.</param>
         /// <param name="message">The message describing the exception.</param>
         /// <returns>The original value.</returns>
-        public static string ThrowIfNullOrWhiteSpace(this string value, string message = "Argument can not be null, empty or consists only of white-space characters!")
+        public static string ThrowIfNullOrWhiteSpace(this string value,
+            string message = "Argument can not be null, empty or consists only of white-space characters!")
         {
             Throw<ArgumentException>.IfNullOrWhiteSpace(value, message);
             return value;
